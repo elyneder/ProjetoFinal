@@ -9,7 +9,8 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
 
 # Carregar o dataset
-movies = pd.read_csv("tmdb_5000_movies.csv")
+url_movies = "https://drive.google.com/uc?export=download&id=17dWfqGAtdKZAR0rTCT6cv7weiIcrNycZ"
+movies = pd.read_csv(url_movies)
 
 # Função para extrair o gênero principal
 def main_genre_in_list(genre_list):
