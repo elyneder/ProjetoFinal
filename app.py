@@ -96,7 +96,7 @@ st.set_page_config(page_title="Análise de Filmes", layout="wide")
 st.title('Análise de Filmes - TMDB Dataset')
 
 # Sidebar com a navegação
-sidebar = st.sidebar.radio('Escolha uma seção', ['Cenário', 'Perguntas', 'Análises', 'Modelos', 'Conclusões'])
+sidebar = st.sidebar.radio('Escolha uma seção', ['Cenário', 'Análises', 'Modelos', 'Conclusões'])
 
 if sidebar == 'Cenário':
     st.subheader('Cenário')
@@ -104,15 +104,6 @@ if sidebar == 'Cenário':
         Este é um conjunto de dados do TMDB com informações sobre 5000 filmes. O conjunto inclui dados sobre orçamento, receita, popularidade, 
         voto médio, gêneros, língua original e outros atributos relacionados aos filmes. O objetivo é explorar esses dados para identificar padrões
         e criar um modelo preditivo para a média de votos dos filmes.
-    """)
-
-elif sidebar == 'Perguntas':
-    st.subheader('Perguntas')
-    st.write("""
-        1. Quais são as distribuições das variáveis numéricas (orçamento, receita, popularidade e média de votos)?
-        2. Existe alguma relação entre o orçamento e a receita de um filme?
-        3. Como a média de votos varia entre os gêneros principais dos filmes?
-        4. Qual a distribuição das línguas originais dos filmes?
     """)
 
 elif sidebar == 'Análises':
@@ -147,12 +138,12 @@ elif sidebar == 'Modelos':
 elif sidebar == 'Conclusões':
     st.subheader('Conclusões')
     st.write("""
-        A partir das análises realizadas, podemos observar que:
+        A partir das análises realizadas, obtive as seguintes observações:
         
-        1. Existe uma distribuição bastante concentrada para variáveis como orçamento e popularidade.
-        2. O orçamento e a receita dos filmes possuem uma correlação visível no gráfico de dispersão.
-        3. O gênero do filme tem um impacto na média dos votos, conforme mostrado nos boxplots.
-        4. A língua original dos filmes é predominante em inglês, mas outras línguas como francês e espanhol também estão bem representadas.
+        Existe uma distribuição bastante concentrada para variáveis como orçamento e popularidade.
+        O orçamento e a receita dos filmes possuem uma correlação visível no gráfico de dispersão.
+        O gênero do filme tem um impacto na média dos votos, conforme mostrado nos boxplots.
+        A língua original dos filmes é predominante em inglês, mas outras línguas como francês e espanhol também estão bem representadas.
 
         O modelo de regressão linear apresentou um **R²** razoável, indicando que as variáveis preditoras explicam parcialmente a média de votos dos filmes.
     """)
